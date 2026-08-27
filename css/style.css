@@ -1,1 +1,69 @@
-﻿/* Estilos mínimos TP1: Uso exclusivo de Bootstrap 5.3 y sus clases/colores utilitarios */
+﻿/* ============================================================
+   Estilos mínimos TP1: Uso exclusivo de Bootstrap 5.3 y sus
+   clases/colores utilitarios.
+
+   Breakpoints responsivos del proyecto definidos a nivel CSS.
+   Bootstrap maneja el grid y "lo responsivo"; aquí dejamos
+   declarados y documentados los umbrales propios de la app y
+   un indicador visual (debug) que muestra el breakpoint activo.
+   ============================================================ */
+
+/* Definición declarativa de los breakpoints de la aplicación */
+:root {
+  --bp-small: 400px; /* Móviles / phablets  */
+  --bp-medium: 900px; /* Tablets / notebooks */
+  --bp-large: 1200px; /* Desktop / escritorio */
+}
+
+/* ------------------------------------------------------------
+ * Indicador visual de breakpoint activo (debug / validación).
+ * Fijo en una esquina, muestra SOLO los 3 breakpoints propios:
+ *   400px  → .bp-400
+ *   900px  → .bp-900
+ *   1200px → .bp-1200
+ * Por debajo de 400px el indicador permanece oculto.
+ * ---------------------------------------------------------- */
+.breakpoint-indicator {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1080;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  background-color: rgba(13, 110, 253, 0.85); /* primary */
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.25);
+  pointer-events: none; /* no interfiere con el contenido */
+  user-select: none;
+}
+
+.breakpoint-indicator span {
+  display: none; /* cada span se activa solo en su rango */
+}
+
+/* Breakpoint LARGE ≥ 1200px (escritorio) → mostrar "1200px" */
+@media (min-width: 1200px) {
+  .breakpoint-indicator .bp-1200 {
+    display: inline-flex;
+  }
+}
+
+/* Breakpoint MEDIUM ≥ 900px y < 1200px (tablet / notebook) → "900px" */
+@media (min-width: 900px) and (max-width: 1199.98px) {
+  .breakpoint-indicator .bp-900 {
+    display: inline-flex;
+  }
+}
+
+/* Breakpoint SMALL ≥ 400px y < 900px (móvil / phablet) → "400px" */
+@media (min-width: 400px) and (max-width: 899.98px) {
+  .breakpoint-indicator .bp-400 {
+    display: inline-flex;
+  }
+}
