@@ -10,11 +10,11 @@ Este es el primer trabajo práctico grupal del curso de Desarrollo de Sistemas W
 
 ### Integrantes del Equipo
 
-- **Leandro (Responsable de Estructura y Bases del Proyecto)**: [github.com/leoroan]
-- **[Integrante 2]**: [URL_GITHUB_INTEGRANTE_2]
-- **[Integrante 3]**: [URL_GITHUB_INTEGRANTE_3]
-- **[Integrante 4]**: [URL_GITHUB_INTEGRANTE_4]
-- **[Integrante 5]**: [URL_GITHUB_INTEGRANTE_5]
+- **Leandro Maselli(Responsable de Estructura y Bases del Proyecto)**: [github.com/leoroan]
+- **Javier Canteros**: [URL_GITHUB_INTEGRANTE_2]
+- **Maximiliano Quinteros**: [URL_GITHUB_INTEGRANTE_3]
+- **Damián Pelisare**: [URL_GITHUB_INTEGRANTE_4]
+- **Nidia Elias**: [URL_GITHUB_INTEGRANTE_5]
 
 ---
 
@@ -46,9 +46,9 @@ Este es el primer trabajo práctico grupal del curso de Desarrollo de Sistemas W
 ├── js/
 │ ├── main.js
 │ └── components/
-│   └── general-navbar.js
+│ └── general-navbar.js
 └── img/
-  └── [archivos_de_imagen]
+└── [archivos_de_imagen]
 \\\
 
 ---
@@ -63,6 +63,7 @@ Para evitar repetir el código del navbar en cada vista, la navegación se centr
 - **`js/components/general-navbar.js`**: módulo ES que define el custom element `<general-navbar>`. Se encarga de cargar (`fetch`) el fragmento, inyectarlo en la página y **marcar automáticamente** el enlace activo según la vista actual (`index.html`, `member1.html`…`member5.html`, `bitacora.html`).
 
 **Uso en cada HTML:**
+
 ```html
 <general-navbar></general-navbar>
 ...
