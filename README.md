@@ -85,7 +85,7 @@ Si se modifica la navegación, solo hay que editar `components/navbar.html` y el
   - Color de Texto (Text): #212529 (Dark Neutral)
 - **Google Fonts:**
   - Fuente Principal: **System UI / Roboto (fallback) / apple-system / Segoe UI / Sans-Serif**
-  - > **Nota técnica:** el sitio actualmente usa la pila de fuentes del sistema (sin descargar fuentes de Google) para máxima performance y consistencia con Bootstrap. Además, la etiqueta `<title>` y los textos de la portada están compuestos en la fuente tipográfica por defecto del sistema. Si se desea una fuente tipográfica de Google Fonts (ej. sin problema *Inter* o *Poppins*), el equipo debe incorporar el `<link>` del CDN de Google Fonts en cada `<head>` y definir acá el `font-family` principal.
+  - > **Nota técnica:** el sitio actualmente usa la pila de fuentes del sistema (sin descargar fuentes de Google) para máxima performance y consistencia con Bootstrap. Además, la etiqueta `<title>` y los textos de la portada están compuestos en la fuente tipográfica por defecto del sistema. Si se desea una fuente tipográfica de Google Fonts (ej. sin problema _Inter_ o _Poppins_), el equipo debe incorporar el `<link>` del CDN de Google Fonts en cada `<head>` y definir acá el `font-family` principal.
 - **Iconografía:**
   - Bootstrap Icons (mediante CDN)
 
@@ -105,15 +105,13 @@ Se han implementado las siguientes mejoras para optimizar la visibilidad en moto
 
 ### Funciones JavaScript
 
-### Funciones JavaScript
-
 Toda la interactividad está en [`js/main.js`](../js/main.js), cargado en la portada y en los 5 perfiles. Se detallan las funciones de la **portada** y de **cada perfil**, tal como pide la rúbrica.
 
 #### Portada (`index.html`)
 
 - **Botón "Saludar al equipo" (`welcomeAlertBtn`)**
   - **Explicación:** Al hacer clic en el botón principal de la portada, se muestra un `alert` de bienvenida que orienta al usuario sobre el contenido del sitio (perfiles y bitácora). Implementado con `document.getElementById('welcomeAlertBtn')` y un `addEventListener('click', ...)` dentro del `DOMContentLoaded`.
-  - **Captura de Pantalla:** `![Portada - botón de saludo](img/capturas/portada-saludo.png)` *(pendiente de capturar; reemplazar por la imagen real en `img/capturas/`)*
+  - **Captura de Pantalla:** `![Portada - botón de saludo](img/capturas/portada-saludo.png)` _(pendiente de capturar; reemplazar por la imagen real en `img/capturas/`)_
 
 #### Perfiles Individuales (`member1.html` … `member5.html`)
 
@@ -121,15 +119,11 @@ Toda la interactividad está en [`js/main.js`](../js/main.js), cargado en la por
   - **Explicación:** Cada tarjeta de perfil tiene un botón que alterna la visibilidad de información extra usando `classList.toggle('d-none')`. Además, cambia el texto del botón ("Ver/Ocultar detalles adicionales") y su clase Bootstrap (`btn-primary` ↔ `btn-outline-primary`) para reflejar el estado abierto/cerrado. Todo mediante manipulación del DOM.
   - **Captura de Pantalla:** `![Perfil - desplegable de biografía](img/capturas/perfil-desplegable.png)` ⬇️ (reemplazar por captura real en `img/capturas/`)
 
-> ✅ **Recordatorio obligatorio para la entrega:** sustituir los **dos placeholders de captura** de arriba (líneas de `![...]`) por capturas reales (guardadas en `img/capturas/`) que muestren: (1) la portada con el botón y (2) un perfil con el desplegable abierto y cerrado.
-
 ---
 
 ### URL Publicada en Vercel
 
 - **Enlace al sitio publicado:** [`Mirá el proyecto en Vercel`](https://dswf-2-a-2-c26-desarrollo-de-sistem-beige.vercel.app/)
-
-> Se verificó que la URL `...-beige.vercel.app` responde correctamente y muestra la portada (Equipo N°19).
 
 ---
 
@@ -161,6 +155,7 @@ Toda la interactividad está en [`js/main.js`](../js/main.js), cargado en la por
 Para que el proyecto quede **aprobado**, el README debe cerrar estos puntos que dependen del equipo:
 
 - [ ] **Capturas de pantalla reales** (`img/capturas/`): portada con el botón de saludo y perfil con el desplegable abierto/cerrado. Hoy figuran como placeholders.
-- [ ] **Perfil de GitHub de cada integrante**: reemplazar los `USUARIO-...` de la sección *Integrantes* por el link real de cada uno.
+- [ ] **Perfil de GitHub de cada integrante**: reemplazar los `USUARIO-...` de la sección _Integrantes_ por el link real de cada uno.
 - [ ] (Opcional) Incorporar una **Google Font** real (CDN) si se quiere cumplir literalmente la guía de estilos, y documentarla acá.
+
 ---
