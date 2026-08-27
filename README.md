@@ -116,7 +116,7 @@ Se han implementado las siguientes mejoras para optimizar la visibilidad en moto
 
 ### URL Publicada en Vercel
 
-- **Enlace al sitio publicado:** [URL_DE_VERCEL_PENDIENTE]
+- **Enlace al sitio publicado:** [\[URL_DE_VERCEL_PENDIENTE\]](https://dswf-2-a-2-c26-desarrollo-de-sistem-beige.vercel.app/)
 
 ---
 
