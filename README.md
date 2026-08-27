@@ -11,10 +11,10 @@ Este es el primer trabajo práctico grupal del curso de Desarrollo de Sistemas W
 ### Integrantes del Equipo
 
 - **Leandro Maselli(Responsable de Estructura y Bases del Proyecto)**: [github.com/leoroan]
-- **Javier Canteros**: [URL_GITHUB_INTEGRANTE_2]
-- **Maximiliano Quinteros**: [URL_GITHUB_INTEGRANTE_3]
-- **Damián Pelisare**: [URL_GITHUB_INTEGRANTE_4]
-- **Nidia Elias**: [URL_GITHUB_INTEGRANTE_5]
+- **Javier Canteros**: [github.com/2]
+- **Maximiliano Quinteros**: [github.com/3]
+- **Damián Pelisare**: [github.com/4]
+- **Nidia Elias**: [github.com/5]
 
 ---
 
@@ -30,8 +30,6 @@ Este es el primer trabajo práctico grupal del curso de Desarrollo de Sistemas W
 
 ### Estructura de Archivos y Carpetas
 
-\\\ ext
-.
 ├── index.html
 ├── member1.html
 ├── member2.html
@@ -49,7 +47,6 @@ Este es el primer trabajo práctico grupal del curso de Desarrollo de Sistemas W
 │ └── general-navbar.js
 └── img/
 └── [archivos_de_imagen]
-\\\
 
 ---
 
@@ -116,7 +113,7 @@ Se han implementado las siguientes mejoras para optimizar la visibilidad en moto
 
 ### URL Publicada en Vercel
 
-- **Enlace al sitio publicado:** [\[URL_DE_VERCEL_PENDIENTE\]](https://dswf-2-a-2-c26-desarrollo-de-sistem-beige.vercel.app/)
+- **Enlace al sitio publicado:** [\Mirá el proyecto en Vercel](https://dswf-2-a-2-c26-desarrollo-de-sistem-beige.vercel.app/)
 
 ---
 
