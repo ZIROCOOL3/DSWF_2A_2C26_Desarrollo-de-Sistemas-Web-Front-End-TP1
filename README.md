@@ -10,11 +10,13 @@ Este es el primer trabajo práctico grupal del curso de Desarrollo de Sistemas W
 
 ### Integrantes del Equipo
 
-- **Leandro Maselli(Responsable de Estructura y Bases del Proyecto)**: [github.com/leoroan]
-- **Javier Canteros**: [github.com/2]
-- **Maximiliano Quinteros**: [github.com/3]
-- **Damián Pelisare**: [github.com/4]
-- **Nidia Elias**: [github.com/5]
+- **Leandro Maselli** (Responsable de Estructura y Bases del Proyecto): [github.com/leoroan](https://github.com/leoroan)
+- **Javier Canteros**: [github.com/USUARIO-javier](https://github.com/USUARIO-javier) <!-- TODO: pegar el perfil real -->
+- **Maximiliano Quinteros**: [github.com/USUARIO-maximiliano](https://github.com/USUARIO-maximiliano) <!-- TODO: pegar el perfil real -->
+- **Damián Pelisare**: [github.com/USUARIO-damian](https://github.com/USUARIO-damian) <!-- TODO: pegar el perfil real -->
+- **Nidia Elias**: [github.com/USUARIO-nidia](https://github.com/USUARIO-nidia) <!-- TODO: pegar el perfil real -->
+
+> ⚠️ **Pendiente del equipo:** reemplazar cada `USUARIO-...` por el link real de GitHub de cada integrante (ej. `[github.com/leoroan](https://github.com/leoroan)`). Los cuatro perfiles restantes figuran como placeholder.
 
 ---
 
@@ -30,23 +32,28 @@ Este es el primer trabajo práctico grupal del curso de Desarrollo de Sistemas W
 
 ### Estructura de Archivos y Carpetas
 
-├── index.html
-├── member1.html
-├── member2.html
-├── member3.html
-├── member4.html
-├── member5.html
-├── bitacora.html
+```
+├── index.html               → Portada
+├── member1.html             → Perfil Leandro Maselli
+├── member2.html             → Perfil Javier Canteros
+├── member3.html             → Perfil Maximiliano Quinteros
+├── member4.html             → Perfil Damián Pelisare
+├── member5.html             → Perfil Nidia Elias
+├── bitacora.html            → Bitácora de desarrollo
+├── "condiciones del proyecto 1.md"
 ├── components/
-│ └── navbar.html
+│  └── navbar.html           → fragmento HTML del navbar (única fuente de verdad)
 ├── css/
-│ └── style.css
+│  └── style.css             → estilos mínimos + breakpoints 400/900/1200
 ├── js/
-│ ├── main.js
-│ └── components/
-│ └── general-navbar.js
+│  ├── main.js               → interactividad de portada y perfiles
+│  └── components/
+│     └── general-navbar.js  → Web Component <general-navbar>
 └── img/
-└── [archivos_de_imagen]
+   ├── favicon.ico
+   ├── yo_para_gmail.png
+   └── capturas/             → capturas de pantalla para este README (sección Funciones JS)
+```
 
 ---
 
@@ -77,7 +84,8 @@ Si se modifica la navegación, solo hay que editar `components/navbar.html` y el
   - Color de Fondo (Background): #f8f9fa (Light Gray)
   - Color de Texto (Text): #212529 (Dark Neutral)
 - **Google Fonts:**
-  - Fuente Principal: System UI / Roboto / Apple-System / Sans-Serif
+  - Fuente Principal: **System UI / Roboto (fallback) / apple-system / Segoe UI / Sans-Serif**
+  - > **Nota técnica:** el sitio actualmente usa la pila de fuentes del sistema (sin descargar fuentes de Google) para máxima performance y consistencia con Bootstrap. Además, la etiqueta `<title>` y los textos de la portada están compuestos en la fuente tipográfica por defecto del sistema. Si se desea una fuente tipográfica de Google Fonts (ej. sin problema *Inter* o *Poppins*), el equipo debe incorporar el `<link>` del CDN de Google Fonts en cada `<head>` y definir acá el `font-family` principal.
 - **Iconografía:**
   - Bootstrap Icons (mediante CDN)
 
@@ -97,23 +105,31 @@ Se han implementado las siguientes mejoras para optimizar la visibilidad en moto
 
 ### Funciones JavaScript
 
-#### Portada (\index.html\)
+### Funciones JavaScript
 
-- **Botón de Saludo Interactivo**
-  - **Explicación:** Muestra un mensaje de bienvenida y orientación al usuario al hacer clic en el botón principal de la portada.
-  - **Captura de Pantalla:** [Pendiente de captura final]
+Toda la interactividad está en [`js/main.js`](../js/main.js), cargado en la portada y en los 5 perfiles. Se detallan las funciones de la **portada** y de **cada perfil**, tal como pide la rúbrica.
 
-#### Perfiles Individuales (\memberX.html\)
+#### Portada (`index.html`)
 
-- **Desplegable de Biografía y Detalles Adicionales**
-  - **Explicación:** Permite alternar la visibilidad de información adicional en la tarjeta de perfil de cada integrante mediante interacción con DOM en JS.
-  - **Captura de Pantalla:** [Pendiente de captura final]
+- **Botón "Saludar al equipo" (`welcomeAlertBtn`)**
+  - **Explicación:** Al hacer clic en el botón principal de la portada, se muestra un `alert` de bienvenida que orienta al usuario sobre el contenido del sitio (perfiles y bitácora). Implementado con `document.getElementById('welcomeAlertBtn')` y un `addEventListener('click', ...)` dentro del `DOMContentLoaded`.
+  - **Captura de Pantalla:** `![Portada - botón de saludo](img/capturas/portada-saludo.png)` *(pendiente de capturar; reemplazar por la imagen real en `img/capturas/`)*
+
+#### Perfiles Individuales (`member1.html` … `member5.html`)
+
+- **Desplegable "Ver detalles adicionales" (`toggleBioBtn` / `extraInfo`)**
+  - **Explicación:** Cada tarjeta de perfil tiene un botón que alterna la visibilidad de información extra usando `classList.toggle('d-none')`. Además, cambia el texto del botón ("Ver/Ocultar detalles adicionales") y su clase Bootstrap (`btn-primary` ↔ `btn-outline-primary`) para reflejar el estado abierto/cerrado. Todo mediante manipulación del DOM.
+  - **Captura de Pantalla:** `![Perfil - desplegable de biografía](img/capturas/perfil-desplegable.png)` ⬇️ (reemplazar por captura real en `img/capturas/`)
+
+> ✅ **Recordatorio obligatorio para la entrega:** sustituir los **dos placeholders de captura** de arriba (líneas de `![...]`) por capturas reales (guardadas en `img/capturas/`) que muestren: (1) la portada con el botón y (2) un perfil con el desplegable abierto y cerrado.
 
 ---
 
 ### URL Publicada en Vercel
 
-- **Enlace al sitio publicado:** [\Mirá el proyecto en Vercel](https://dswf-2-a-2-c26-desarrollo-de-sistem-beige.vercel.app/)
+- **Enlace al sitio publicado:** [`Mirá el proyecto en Vercel`](https://dswf-2-a-2-c26-desarrollo-de-sistem-beige.vercel.app/)
+
+> Se verificó que la URL `...-beige.vercel.app` responde correctamente y muestra la portada (Equipo N°19).
 
 ---
 
@@ -140,4 +156,11 @@ Se han implementado las siguientes mejoras para optimizar la visibilidad en moto
 - **Revisión y Adaptación:**
   - Leandro revisó, probó y validó minuciosamente la estructura generada por el agente (Cline con Gemini 3.5), asegurando el cumplimiento total de los requisitos de Bootstrap 5.3, la responsividad y la rúbrica del TP1 antes de su publicación.
 
+### Pendientes para la entrega (checklist de aprobación)
+
+Para que el proyecto quede **aprobado**, el README debe cerrar estos puntos que dependen del equipo:
+
+- [ ] **Capturas de pantalla reales** (`img/capturas/`): portada con el botón de saludo y perfil con el desplegable abierto/cerrado. Hoy figuran como placeholders.
+- [ ] **Perfil de GitHub de cada integrante**: reemplazar los `USUARIO-...` de la sección *Integrantes* por el link real de cada uno.
+- [ ] (Opcional) Incorporar una **Google Font** real (CDN) si se quiere cumplir literalmente la guía de estilos, y documentarla acá.
 ---
