@@ -33,44 +33,85 @@
             equipo durante el Trabajo Práctico 1.
           </p>
 
-          <div class="card mb-4 shadow-sm border-0">
-            <div class="card-body">
-              <h3 class="card-title h4 text-dark fw-bold">
-                <i class="bi bi-calendar-check me-2 text-primary"></i>Semana 1:
-                Organización y Planificación
+          <!-- SEMANA 1: Contenedor Principal -->
+          <div class="card mb-4 shadow-sm border-0 bg-light">
+            <div class="card-body p-4">
+              <h3 class="card-title h4 text-dark fw-bold mb-3">
+                <i class="bi bi-calendar-week me-2 text-primary"></i>Semana 1:
+                Organización y Planificación: asentamiento de las bases -
+                Planning grupal
               </h3>
-              <h6 class="card-subtitle mb-2 text-muted">Fecha: [27/08/2026]</h6>
-              <p class="card-text">
-                Nos reunimos virtualmente para definir los pasos a seguir,
-                establecer los roles de cada uno, y definir estructura y diseño.
-                Acordamos mantener una comunicación constante por canales de
-                mensajería y documentar cada avance.
-              </p>
+
+              <!-- DIA 1: Anidado visualmente -->
+              <div class="border-start border-3 border-primary ps-4 ms-2 mt-3">
+                <div class="card border-0 shadow-none bg-white mb-3">
+                  <div class="card-body p-3">
+                    <h5 class="card-title h6 fw-bold text-secondary">
+                      <i class="bi bi-circle-fill text-success small me-2"></i
+                      >Día 1: Kick-off Meeting
+                    </h5>
+                    <h6 class="card-subtitle mb-2 text-muted small">
+                      Fecha: 27/08/2026
+                    </h6>
+                    <p class="card-text small">
+                      Nos reunimos virtualmente para definir los pasos a seguir,
+                      establecer los roles de cada uno, y definir estructura y
+                      diseño. Acordamos mantener una comunicación constante por
+                      canales de mensajería y documentar cada avance.
+                    </p>
+                  </div>
+                  <div class="card-body p-3">
+                    <h5 class="card-title h6 fw-bold text-secondary">
+                      <i class="bi bi-circle-fill text-primary small me-2"></i
+                      >Día 2: Estructura y Maquetación
+                    </h5>
+                    <h6 class="card-subtitle mb-2 text-muted small">
+                      Fecha: 28/08/2026
+                    </h6>
+                    <p class="card-text small">
+                      Comencé la maquetación de mi perfil individual (Leandro)
+                      utilizando
+                      <strong>Bootstrap 5.3</strong> para lo responsivo del
+                      sitio. Definí a nivel CSS los <em>breakpoints</em> propios
+                      de la app (400px, 900px y 1200px) documentados como
+                      variables en <code>css/style.css</code>. Para validar la
+                      correcta visualización en móviles y escritorio, incorporé
+                      un indicador visual fijo (extremo inferior der.) en todo
+                      el sitio que muestra el breakpoint activo en pantalla
+                      (solo esos tres rangos). También integré los primeros
+                      componentes visuales como las tarjetas de habilidades.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Aquí podrías agregar Día 2, Día 3, etc. siguiendo la misma estructura -->
+              </div>
             </div>
           </div>
 
-          <!-- <div class="card mb-4 shadow-sm border-0">
-            <div class="card-body">
-              <h3 class="card-title h4 text-dark fw-bold"><i class="bi bi-calendar-check me-2 text-primary"></i>Semana 2: Diseño de Portada y Estructura de Perfiles</h3>
-              <h6 class="card-subtitle mb-2 text-muted">Fecha: [DD/MM/2026]</h6>
-              <p class="card-text">
-                Construimos el archivo <code>index.html</code> utilizando componentes de Bootstrap 5.3 para asegurar la responsividad en distintos dispositivos (breakpoints de 400px, 900px y 1200px). Se definieron las tarjetas individuales para cada uno de los 5 integrantes.
-              </p>
-            </div>
+          <!-- SEMANA 2: Estructura comentada para futuro uso -->
+          <!-- 
+      <div class="card mb-4 shadow-sm border-0 bg-light">
+        <div class="card-body p-4">
+          <h3 class="card-title h4 text-dark fw-bold mb-3">
+            <i class="bi bi-calendar-week me-2 text-primary"></i>Semana 2: Diseño y Estructura
+          </h3>
+          <div class="border-start border-3 border-primary ps-4 ms-2 mt-3">
+             <div class="card border-0 shadow-none bg-white mb-3">
+                <div class="card-body p-3">
+                   <h5 class="card-title h6 fw-bold text-secondary">Día X: Avance específico</h5>
+                   <p class="card-text small">Detalle del día...</p>
+                </div>
+             </div>
           </div>
-
-          <div class="card mb-4 shadow-sm border-0">
-            <div class="card-body">
-              <h3 class="card-title h4 text-dark fw-bold"><i class="bi bi-calendar-check me-2 text-primary"></i>Semana 3: Interactividad con JavaScript y Despliegue</h3>
-              <h6 class="card-subtitle mb-2 text-muted">Fecha: [DD/MM/2026]</h6>
-              <p class="card-text">
-                Integramos funciones dinámicas tanto en la portada como en los perfiles individuales. Configuramos el repositorio público en GitHub, verificamos la documentación completa en el <code>README.md</code> y realizamos el despliegue final en Vercel.
-              </p>
-            </div>
-          </div> -->
+        </div>
+      </div> 
+      -->
 
           <div class="text-center mt-4">
-            <a href="index.html" class="btn btn-secondary shadow-sm"
+            <a
+              href="index.html"
+              class="btn btn-secondary shadow-sm rounded-pill px-4"
               ><i class="bi bi-arrow-left me-1"></i>Volver al Inicio</a
             >
           </div>
